@@ -1,0 +1,26 @@
+{
+  "name": "thethought-app",
+  "version": "1.0.0",
+  "description": "An app",
+  "main": "index.js",
+  "dependencies": {
+    "config": "^3.3.1",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.26",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DouscheSois/theThought-App.git"
+  },
+  "author": "Roger Alexander",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DouscheSois/theThought-App/issues"
+  },
+  "homepage": "https://github.com/DouscheSois/theThought-App#readme"
+}

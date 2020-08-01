@@ -1,0 +1,20 @@
+--------------------------------------------------------------------------------
+Notes for App:
+
+Run dev: npm start server (nodemon included)
+
+A login and registration page then redirects to a home page about the thought app.
+
+Routes are finished but it is not creating new user. Maybe
+has to do something with req.body
+
+
+
+
+
+
+
+--------------------------------------------------------------------------------
+Notes in General:
+
+Build Personal site with React, Node, Express, and Mongo.

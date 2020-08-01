@@ -12,6 +12,7 @@ app.get("/", (req, res) => res.send("API is Online"));
 
 app.use("/registration", require("./routes/registration"));
 app.use("/login", require("./routes/login"));
+app.use("/profile", require("./routes/profile"));
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server Running on Port ${PORT}`));

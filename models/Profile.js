@@ -24,9 +24,6 @@ const Profile = new mongoose.Schema({
     instagram: {
       type: String,
     },
-    reddit: {
-      type: String,
-    },
   },
 });
 

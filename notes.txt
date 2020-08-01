@@ -7,9 +7,11 @@ A login and registration page then redirects to a home page about the thought ap
 
 Routes are finished but it is not creating new user. Maybe
 has to do something with req.body - |||Fixed||| it by adding the middleware
-  required to use it. Placed it in the index.js file as: 
+  required to use it. Placed it in the index.js file as:
   app.use(express.json());
 
+Profile wont create a new profile. It just keeps loading - |||Fixed||| it by
+using .not().isEmpty() instead of .notEmpty() when checking.
 
 
 

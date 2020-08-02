@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const Entries = new mongoose.Schema({
   user: {
-    type: Schema.Types.ObjectId,
+    type: mongoose.Schema.Types.ObjectId,
     ref: "ref",
   },
   text: {
@@ -15,7 +15,7 @@ const Entries = new mongoose.Schema({
   upvotes: [
     {
       user: {
-        type: Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: "user",
       },
     },
@@ -23,7 +23,7 @@ const Entries = new mongoose.Schema({
   comments: [
     {
       user: {
-        type: Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: "user",
       },
       text: {
@@ -36,7 +36,7 @@ const Entries = new mongoose.Schema({
       upvotes: [
         {
           user: {
-            type: Schema.Types.ObjectId,
+            type: mongoose.Schema.Types.ObjectId,
             ref: "user",
           },
         },
@@ -48,3 +48,5 @@ const Entries = new mongoose.Schema({
     default: Date.now,
   },
 });
+
+module.exports = mongoose.model("entries", Entries);

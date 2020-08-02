@@ -3,11 +3,12 @@ const router = express.Router();
 const auth = require("../middleware/auth");
 const { check, validationResult } = require("express-validator");
 
+const Entries = require("../models/Entries");
 const Profile = require("../models/Profile");
 const User = require("../models/User");
 
 //@Route GET /profile/me
-// Private (Nseed auth middleware)
+// Private (Needs auth middleware)
 // Gets current users profile
 router.get("/me", auth, async (req, res) => {
   try {
@@ -24,7 +25,7 @@ router.get("/me", auth, async (req, res) => {
     res.json(profile);
   } catch (err) {
     console.error(err.message);
-    res.status(500).send("Server Error iwht getting current profile");
+    res.status(500).send("Server Error with getting current profile");
   }
 });
 

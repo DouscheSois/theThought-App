@@ -6,8 +6,86 @@ const { check, validationResult } = require("express-validator");
 const Profile = require("../models/Profile");
 const User = require("../models/User");
 
-// @Route /profile
-// Private
+//@Route GET /profile/me
+// Private (Nseed auth middleware)
+// Gets current users profile
+router.get("/me", auth, async (req, res) => {
+  try {
+    const profile = await Profile.findOne({
+      user: req.user.id,
+    }).populate("user", ["name", "bio", "location"]);
+
+    if (!profile) {
+      return res.status(400).json({
+        msg: "There is no profile for this user",
+      });
+    }
+
+    res.json(profile);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send("Server Error iwht getting current profile");
+  }
+});
+
+// @Route GET /profile
+// Public (Does not need auth middleware)
+// Gets all profiles
+router.get("/", async (req, res) => {
+  try {
+    const profiles = await Profile.find().populate("user", [
+      "name",
+      "bio",
+      "location",
+    ]);
+    res.json(profiles);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send("Server Error with getting all Profiles");
+  }
+});
+
+// @Route GET /profile/user/:user_id
+// Public (Does not need auth middleware)
+// Gets profile by user ID
+router.get("/user/:user_id", async (req, res) => {
+  try {
+    const profile = await Profile.findOne({
+      user: req.params.user_id,
+    }).populate("user", ["name", "avatar"]);
+    if (!profile)
+      return res.status(400).json({ msg: "Unable to find profile" });
+    res.json(profile);
+  } catch (err) {
+    console.error(err.message);
+    if (err.kind == "ObjectId") {
+      res.status(400).json({ msg: "Unable to find profile" });
+    }
+    res.status(500).send("Server Error");
+  }
+});
+
+//@Route DELETE /profile
+// Private (Needs auth middleware)
+// Deletes the user along with the profile and the users entries.
+router.delete("/", auth, async (req, res) => {
+  try {
+    //Remove entries
+    await Entries.deleteMany({ user: req.user.id });
+    // Remove profile
+    await Profile.findOneAndRemove({ user: req.user.id });
+    //Remove User
+    await User.findOneAndRemove({ _id: req.user.id });
+
+    res.json({ msg: "User deleted" });
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send("Server Error with deleting the user");
+  }
+});
+
+// @Route POST /profile
+// Private (Needs auth middleware)
 // Creates and Updates a User Profile
 router.post(
   "/",
@@ -60,22 +138,5 @@ router.post(
     }
   }
 );
-
-// @Route /profile
-// Public
-// Gets all profiles
-router.get("/", async (req, res) => {
-  try {
-    const profiles = await Profile.find().populate("user", [
-      "name",
-      "bio",
-      "location",
-    ]);
-    res.json(profiles);
-  } catch (err) {
-    console.error(err.message);
-    res.status(500).send("Server Error with getting all Profiles");
-  }
-});
 
 module.exports = router;

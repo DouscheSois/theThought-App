@@ -1,7 +1,7 @@
 --------------------------------------------------------------------------------
 Notes for App:
 
-Run dev: npm start server (nodemon included)
+Run dev: npm run server (nodemon included)
 
 A login and registration page then redirects to a home page about the thought app.
 
@@ -12,6 +12,9 @@ has to do something with req.body - |||Fixed||| it by adding the middleware
 
 Profile wont create a new profile. It just keeps loading - |||Fixed||| it by
 using .not().isEmpty() instead of .notEmpty() when checking.
+
+Double check profile is they work and if they are done. I think I am all good
+but do double check. After start with the entries.js in the route folder.
 
 
 

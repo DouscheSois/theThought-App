@@ -13,12 +13,12 @@ has to do something with req.body - |||Fixed||| it by adding the middleware
 Profile won't create a new profile. It just keeps loading - |||Fixed||| it by
 using .not().isEmpty() instead of .notEmpty() when checking.
 
-Double check profile if they work and if they are done. I think I am all good
-but do double check. After, start with the entries.js in the route folder.
+Already checked in routes work and like works. try downvoting an entry.
 
-
-
-
+todo list:
+1. comments for main entry. |||DONE|||
+2. upvotes and downvotes for comments in main entry.
+3. comments for the comments in main entry.
 
 
 

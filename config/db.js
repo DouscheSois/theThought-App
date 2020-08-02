@@ -10,7 +10,7 @@ const connectDB = async () => {
       useNewUrlParser: true,
       useCreateIndex: true,
     });
-    console.log("Mongoose is Connected...");
+    console.log("MongoDB is Connected...");
   } catch (err) {
     console.error(err.message);
     process.exit(1);

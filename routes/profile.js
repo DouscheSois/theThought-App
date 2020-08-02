@@ -3,9 +3,26 @@ const router = express.Router();
 const auth = require("../middleware/auth");
 const { check, validationResult } = require("express-validator");
 
-const Entries = require("../models/Entries");
+const Entry = require("../models/Entry");
 const Profile = require("../models/Profile");
 const User = require("../models/User");
+
+// @Route GET /profile
+// Public (Does not need auth middleware)
+// Gets all profiles
+router.get("/", async (req, res) => {
+  try {
+    const profiles = await Profile.find().populate("user", [
+      "name",
+      "bio",
+      "location",
+    ]);
+    res.json(profiles);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send("Server Error with getting all Profiles");
+  }
+});
 
 //@Route GET /profile/me
 // Private (Needs auth middleware)
@@ -26,23 +43,6 @@ router.get("/me", auth, async (req, res) => {
   } catch (err) {
     console.error(err.message);
     res.status(500).send("Server Error with getting current profile");
-  }
-});
-
-// @Route GET /profile
-// Public (Does not need auth middleware)
-// Gets all profiles
-router.get("/", async (req, res) => {
-  try {
-    const profiles = await Profile.find().populate("user", [
-      "name",
-      "bio",
-      "location",
-    ]);
-    res.json(profiles);
-  } catch (err) {
-    console.error(err.message);
-    res.status(500).send("Server Error with getting all Profiles");
   }
 });
 
@@ -72,7 +72,7 @@ router.get("/user/:user_id", async (req, res) => {
 router.delete("/", auth, async (req, res) => {
   try {
     //Remove entries
-    await Entries.deleteMany({ user: req.user.id });
+    await Entry.deleteMany({ user: req.user.id });
     // Remove profile
     await Profile.findOneAndRemove({ user: req.user.id });
     //Remove User

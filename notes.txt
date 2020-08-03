@@ -17,9 +17,11 @@ Already checked in routes work and like works. try downvoting an entry.
 
 todo list:
 1. comments for main entry. |||DONE|||
-2. upvotes and downvotes for comments in main entry.
-3. comments for the comments in main entry.
-
+2. upvotes and downvotes for entry.  |||DONE|||
+3. upvotes and downvotes for the comments in an entry. (FEATURE_OFF)
+4. delete the comments for the entries. |||DONE|||
+5. comments for the comments in entry. (FEATURE_OFF)
+6. delete the comments of the comments of the entry (FEATURE_OFF)
 
 
 
@@ -27,3 +29,5 @@ todo list:
 Notes in General:
 
 Build Personal site with React, Node, Express, and Mongo.
+
+Text the Number to say No Thanks.

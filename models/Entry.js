@@ -20,7 +20,7 @@ const Entry = new mongoose.Schema({
       },
     },
   ],
-  comment: [
+  comments: [
     {
       user: {
         type: mongoose.Schema.Types.ObjectId,
@@ -33,14 +33,6 @@ const Entry = new mongoose.Schema({
       name: {
         type: String,
       },
-      upvotes: [
-        {
-          user: {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: "user",
-          },
-        },
-      ],
     },
   ],
   date: {

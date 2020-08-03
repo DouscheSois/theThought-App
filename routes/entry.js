@@ -38,7 +38,7 @@ router.get("/", auth, async (req, res) => {
     res.json(entries);
   } catch (err) {
     console.error(err.message);
-    res.status(500).send("Server Error");
+    res.status(500).send("Server Error with Getting the Entries");
   }
 });
 
@@ -72,7 +72,7 @@ router.post(
   }
 );
 
-// @Route PUT /entry/upvotes/:id
+// @Route PUT /entry/upvote/:id
 // Private (Needs auth middleware)
 // Upvotes the Entry using the entry id
 router.put("/upvote/:id", auth, async (req, res) => {
@@ -151,11 +151,11 @@ router.post(
         user: req.user.id,
       };
 
-      entry.comment.unshift(newComment);
+      entry.comments.unshift(newComment);
 
       await entry.save();
 
-      res.json(entry.comment);
+      res.json(entry.comments);
     } catch (err) {
       console.error(err.message);
       res
@@ -188,6 +188,43 @@ router.delete("/:id", auth, async (req, res) => {
       return res.status(404).json({ msg: "Entry not found" });
     }
     res.status(500).send("Server Error with the Deletion of the Entry Process");
+  }
+});
+
+// @Route DELETE /entry/comment/:id/:comment_id
+// Private (Needs auth middleware)
+// Deletes a comment of the entry
+router.delete("/comment/:id/:comment_id", auth, async (req, res) => {
+  try {
+    const entry = await Entry.findById(req.params.id);
+
+    //Pull out comment
+    const comment = entry.comments.find(
+      (comment) => comment.id === req.params.comment_id
+    );
+
+    //Make sure comment exists
+    if (!comment) {
+      return res.status(404).json({ msg: "Comment does not exist" });
+    }
+
+    //Check user
+    if (comment.user.toString() !== req.user.id) {
+      return res.status(401).json({ msg: "User not authorize" });
+    }
+
+    // Remove index
+    const removeIndex = entry.comments
+      .map((comment) => comment.user.toString())
+      .indexOf(req.user.id);
+
+    entry.comments.splice(removeIndex, 1);
+
+    await entry.save();
+    res.json(entry.comments);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send("Server Error with Deleting the Comment Process");
   }
 });
 

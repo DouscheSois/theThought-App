@@ -5,8 +5,8 @@ const app = express();
 
 connectDB();
 
-// req.body
-app.use(express.json());
+// to be able to use req.body middleware
+app.use(express.json({ extended: false }));
 
 app.get("/", (req, res) => res.send("API is Online"));
 

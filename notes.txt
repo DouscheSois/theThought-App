@@ -13,6 +13,11 @@ has to do something with req.body - |||Fixed||| it by adding the middleware
 Profile won't create a new profile. It just keeps loading - |||Fixed||| it by
 using .not().isEmpty() instead of .notEmpty() when checking.
 
+DeprecationWarning: Mongoose: `findOneAndUpdate()` and `findOneAndDelete()`
+without the `useFindAndModify` option set to false are deprecated - |||Fixed||| it
+by adding { extended: false } to the index.js app.use(express.json()). The middleware
+for the req.body.
+
 Already checked in routes work and like works. try downvoting an entry.
 
 todo list:

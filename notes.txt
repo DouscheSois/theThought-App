@@ -1,7 +1,9 @@
 --------------------------------------------------------------------------------
 Notes for App:
 
-Run dev: npm run server (nodemon included)
+Run front: npm start (must be in folder 'front')
+Run back: npm run server (nodemon included)
+Run dev with concurrently: npm run dev
 
 A login and registration page then redirects to a home page about the thought app.
 
@@ -18,15 +20,19 @@ without the `useFindAndModify` option set to false are deprecated - |||Fixed||| 
 by adding { extended: false } to the index.js app.use(express.json()). The middleware
 for the req.body.
 
-Already checked in routes work and like works. try downvoting an entry.
+Try downvoting an entry.
 
-todo list:
+todo list backend:
 1. comments for main entry. |||DONE|||
 2. upvotes and downvotes for entry.  |||DONE|||
 3. upvotes and downvotes for the comments in an entry. (FEATURE_OFF)
 4. delete the comments for the entries. |||DONE|||
 5. comments for the comments in entry. (FEATURE_OFF)
 6. delete the comments of the comments of the entry (FEATURE_OFF)
+
+Build Frontned with React:
+1. Navbar  ~~WORKING ON
+2. Landing  ~~WORKING ON
 
 
 

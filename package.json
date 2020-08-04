@@ -13,10 +13,14 @@
     "request": "^2.88.2"
   },
   "devDependencies": {
+    "concurrently": "^5.2.0",
     "nodemon": "^2.0.4"
   },
   "scripts": {
-    "server": "nodemon server"
+    "start": "node start",
+    "server": "nodemon server",
+    "front": "npm start --prefix front",
+    "dev": "concurrently \"npm run server \" \"npm run front\" "
   },
   "repository": {
     "type": "git",

@@ -1,12 +1,19 @@
-import React from "react";
+import React, { Fragment } from "react";
+
+import Navbar from "./components/Navbar";
+import Landing from "./components/Landing";
+import Footnote from "./components/Footnote";
+
 import "./App.css";
 
-function App() {
+const App = () => {
   return (
-    <div className="home">
-      <h1>Hello </h1>
-    </div>
+    <Fragment>
+      <Navbar />
+      <Landing />
+      <Footnote />
+    </Fragment>
   );
-}
+};
 
 export default App;

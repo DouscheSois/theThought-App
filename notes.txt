@@ -40,5 +40,3 @@ Build Frontned with React:
 Notes in General:
 
 Build Personal site with React, Node, Express, and Mongo.
-
-Text the Number to say No Thanks.

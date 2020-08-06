@@ -20,19 +20,25 @@ without the `useFindAndModify` option set to false are deprecated - |||Fixed||| 
 by adding { extended: false } to the index.js app.use(express.json()). The middleware
 for the req.body.
 
+
 Try downvoting an entry.
 
 todo list backend:
-1. comments for main entry. |||DONE|||
-2. upvotes and downvotes for entry.  |||DONE|||
-3. upvotes and downvotes for the comments in an entry. (FEATURE_OFF)
-4. delete the comments for the entries. |||DONE|||
-5. comments for the comments in entry. (FEATURE_OFF)
-6. delete the comments of the comments of the entry (FEATURE_OFF)
+1. upvotes and downvotes for the comments in an entry. (FEATURE_OFF)
+2. comments for the comments in entry. (FEATURE_OFF)
+3. delete the comments of the comments of the entry (FEATURE_OFF)
 
 Build Frontned with React:
-1. Navbar  ~~WORKING ON
-2. Landing  ~~WORKING ON
+1. Navbar |||DONE||| (can be better)
+2. Landing  |||DONE||| (can be better)
+3. Footnote |||DONE||| (can be better)
+4. Register ~~WORKING ON
+5. Login |||DONE||| (can be better)
+6. Navbar ~~WORKING ON
+
+Login works and user is loaded and it redirects.
+
+
 
 
 

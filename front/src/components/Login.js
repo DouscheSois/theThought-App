@@ -57,7 +57,7 @@ const Login = ({ login, isAuth }) => {
         <input type="submit" className="login-form-submit" value="Login" />
       </form>
       <p>
-        Need an Account? <a href="#">Register</a>
+        Need an Account? <Link to="/register">Register</Link>
       </p>
     </Fragment>
   );

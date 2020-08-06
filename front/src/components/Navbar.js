@@ -6,35 +6,47 @@ import { logout } from "../actions/auth";
 
 const Navbar = ({ auth: { isAuth, isloading }, logout }) => {
   const privateLinks = (
-    <Fragment>
-      <Link className="navbar-link" to="/entries">
-        All Entries
-      </Link>
-      <a className="navbar-link" href="#">
-        Profile
-      </a>
-      <a className="navbar-link" onClick={logout} href="#!">
-        Logout
-      </a>
-    </Fragment>
+    <div className="dropdown-menu">
+      <button className="dropdown-button">
+        <i className="fas fa-ellipsis-h fa-2x"></i>
+        <i className="fas fa-dot-circle fa-2x"></i>
+      </button>
+      <div className="dropdown-content">
+        <Link className="navbar-link" to="/entries">
+          <i className="fas fa-globe fa-2x"></i> Entries
+        </Link>
+        <a className="navbar-link" href="#">
+          <i className="fas fa-user-circle fa-2x"></i> Profile
+        </a>
+        <a className="navbar-link" onClick={logout} href="#!">
+          <i className="fas fa-sign-out-alt fa-2x"></i> Logout
+        </a>
+      </div>
+    </div>
   );
 
   const publicLinks = (
-    <Fragment>
-      <a className="navbar-link" href="#">
-        Register
-      </a>
-      <Link className="navbar-link" to="/login">
-        Login
-      </Link>
-    </Fragment>
+    <div className="dropdown-menu">
+      <button className="dropdown-button">
+        <i className="fas fa-ellipsis-h fa-2x"></i>
+        <i className="fas fa-dot-circle fa-2x"></i>
+      </button>
+      <div className="dropdown-content">
+        <Link className="navbar-link" to="/register">
+          <i className="fas fa-plus fa-2x"></i> Register
+        </Link>
+        <Link className="navbar-link" to="/login">
+          <i className="fas fa-sign-in-alt fa-2x"></i> Login
+        </Link>
+      </div>
+    </div>
   );
 
   return (
     <nav className="navbar">
-      <a className="navbar-brand" href="#">
-        theThought
-      </a>
+      <Link className="navbar-brand" to="/entries">
+        <i className="fas fa-home"></i> theThought
+      </Link>
       <div className="all-navbar-links">
         {!isloading && (
           <Fragment>{isAuth ? privateLinks : publicLinks}</Fragment>

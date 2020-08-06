@@ -7,13 +7,16 @@
 
 body {
   text-align: center;
-  background-color: #a6dcef;
+  background-color: #fff;
 }
 
 /* Navbar CSS */
 .navbar {
   background-color: #333;
-  padding: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   opacity: 0.8;
   display: flex;
   flex-wrap: nowrap;
@@ -24,16 +27,6 @@ body {
   text-decoration: none;
   color: #fff;
   font-size: 2rem;
-}
-
-.all-navbar-links {
-  margin-top: 0.5rem;
-}
-
-.navbar-link {
-  text-decoration: none;
-  margin: 0.5rem;
-  color: #fff;
 }
 
 /* Landing-Page CSS */
@@ -49,18 +42,74 @@ body {
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
+
+/* TOGGLE*/
+.dropdown-button {
+  background-color: white;
+  opacity: 0.9;
+  color: white;
+  border: none;
+  border-radius: 5rem;
+}
+
+.dropdown-button i {
+  font-size: 2rem;
+  color: black;
+  opacity: 0.8;
+}
+
+.dropdown-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f1f1f1;
+  min-width: 6rem;
+  z-index: 2;
+}
+
+.navbar-link {
+  text-decoration: none;
+  margin: 0.5rem;
+  color: #fff;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 0.8rem 1rem;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown-menu:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-menu:hover .dropdown-button {
+  opacity: 1;
+}
+
 /* Footnote CSS */
 .footnote {
-  background-color: beige;
+  opacity: 0.8;
+  color: white;
+  background-color: black;
   padding: 1rem;
 }
 
 @media (max-width: 700px) {
-  .navbar-brand {
-    font-size: 1.6rem;
-  }
-
   .landing-page {
     padding: 2rem;
   }
+}
+
+@media (max-width: 480px) {
 }

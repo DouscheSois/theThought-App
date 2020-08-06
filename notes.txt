@@ -21,22 +21,23 @@ by adding { extended: false } to the index.js app.use(express.json()). The middl
 for the req.body.
 
 
-Try downvoting an entry.
+1. Try downvoting an entry.
 
-todo list backend:
+todo list BACKEND:
 1. upvotes and downvotes for the comments in an entry. (FEATURE_OFF)
 2. comments for the comments in entry. (FEATURE_OFF)
 3. delete the comments of the comments of the entry (FEATURE_OFF)
+4. Change the USER model. In name add unique:true (Will make it a username,
+will be used to display the author's name in a entry.)
 
-Build Frontned with React:
+Build FRONTEND with React:
 1. Navbar |||DONE||| (can be better)
 2. Landing  |||DONE||| (can be better)
 3. Footnote |||DONE||| (can be better)
 4. Register ~~WORKING ON
 5. Login |||DONE||| (can be better)
-6. Navbar ~~WORKING ON
 
-Login works and user is loaded and it redirects.
+
 
 
 

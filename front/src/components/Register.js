@@ -1,16 +1,56 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { Link, Redirect } from "react-router-dom";
+import { register } from "../actions/auth";
 
-const Register = () => {
+const Register = ({ register, isAuth }) => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    password: "",
+    password2: "",
+  });
+  const { name, email, password, password2 } = formData;
+
+  const onChange = (e) =>
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    if (password !== password2) {
+      alert("Passwords do not match");
+    } else {
+      register({ name, email, password });
+    }
+  };
+
+  if (isAuth) {
+    return <Redirect to="/entries" />;
+  }
+
   return (
     <Fragment>
       <h1>Register</h1>
       <h4>Create an Account</h4>
-      <form className="register-form">
+      <form className="register-form" onSubmit={(e) => onSubmit(e)}>
         <div className="form-group">
-          <input type="text" placeholder="Name" name="name" />
+          <input
+            type="text"
+            placeholder="Name"
+            name="name"
+            value={name}
+            onChange={(e) => onChange(e)}
+          />
         </div>
         <div className="form-group">
-          <input type="email" placeholder="Email Address" name="email" />
+          <input
+            type="email"
+            placeholder="Email Address"
+            name="email"
+            value={email}
+            onChange={(e) => onChange(e)}
+          />
         </div>
         <div className="form-group">
           <input
@@ -18,6 +58,8 @@ const Register = () => {
             placeholder="Password"
             name="password"
             minLength="6"
+            value={password}
+            onChange={(e) => onChange(e)}
           />
         </div>
         <div className="form-group">
@@ -26,6 +68,8 @@ const Register = () => {
             placeholder="Confirm Password"
             name="password2"
             minLength="6"
+            value={password2}
+            onChange={(e) => onChange(e)}
           />
         </div>
         <input
@@ -35,10 +79,19 @@ const Register = () => {
         />
       </form>
       <p>
-        Already have an account? <a href="#">Sign In</a>
+        Already have an account? <Link to="/login">Sign In</Link>
       </p>
     </Fragment>
   );
 };
 
-export default Register;
+Register.propTypes = {
+  register: PropTypes.func.isRequired,
+  isAuth: PropTypes.bool,
+};
+
+const stateToProps = (state) => ({
+  isAuth: state.auth.isAuth,
+});
+
+export default connect(stateToProps, { register })(Register);

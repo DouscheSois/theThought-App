@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Landing = () => {
   return (
@@ -11,12 +12,16 @@ const Landing = () => {
           and create a basic profile.
         </h4>
         <div className="landing-page-buttons">
-          <button className="landing-page-register-button" type="button">
-            Register
-          </button>
-          <button className="landing-page-login-button" type="button">
-            Login
-          </button>
+          <Link to="/register">
+            <button className="landing-page-register-button" type="button">
+              Register
+            </button>
+          </Link>
+          <Link to="/login">
+            <button className="landing-page-login-button" type="button">
+              Login
+            </button>
+          </Link>
         </div>
       </div>
     </section>

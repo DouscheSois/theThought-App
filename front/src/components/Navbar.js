@@ -15,9 +15,9 @@ const Navbar = ({ auth: { isAuth, isloading }, logout }) => {
         <Link className="navbar-link" to="/entries">
           <i className="fas fa-globe fa-2x"></i> Entries
         </Link>
-        <a className="navbar-link" href="#">
+        <Link className="navbar-link" to="/profile">
           <i className="fas fa-user-circle fa-2x"></i> Profile
-        </a>
+        </Link>
         <a className="navbar-link" onClick={logout} href="#!">
           <i className="fas fa-sign-out-alt fa-2x"></i> Logout
         </a>

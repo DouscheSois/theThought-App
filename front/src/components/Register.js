@@ -1,10 +1,13 @@
 import React, { Fragment, useState } from "react";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { Link, Redirect } from "react-router-dom";
+
 import { register } from "../actions/auth";
 
-const Register = ({ register, isAuth }) => {
+const Register = () => {
+  const isAuth = useSelector((state) => state.auth.isAuth);
+  const dispatch = useDispatch();
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -21,7 +24,7 @@ const Register = ({ register, isAuth }) => {
     if (password !== password2) {
       alert("Passwords do not match");
     } else {
-      register({ name, email, password });
+      dispatch(register({ name, email, password }));
     }
   };
 
@@ -30,10 +33,10 @@ const Register = ({ register, isAuth }) => {
   }
 
   return (
-    <Fragment>
-      <h1>Register</h1>
-      <h4>Create an Account</h4>
+    <div className="register">
       <form className="register-form" onSubmit={(e) => onSubmit(e)}>
+        <i class="fas fa-user-plus fa-2x"></i>
+        <h4>Create an Account</h4>
         <div className="form-group">
           <input
             type="text"
@@ -77,21 +80,12 @@ const Register = ({ register, isAuth }) => {
           className="register-form-submit"
           value="Register"
         />
+        <p>
+          Already have an account? <Link to="/login">Sign In</Link>
+        </p>
       </form>
-      <p>
-        Already have an account? <Link to="/login">Sign In</Link>
-      </p>
-    </Fragment>
+    </div>
   );
 };
 
-Register.propTypes = {
-  register: PropTypes.func.isRequired,
-  isAuth: PropTypes.bool,
-};
-
-const stateToProps = (state) => ({
-  isAuth: state.auth.isAuth,
-});
-
-export default connect(stateToProps, { register })(Register);
+export default Register;

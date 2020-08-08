@@ -1,11 +1,14 @@
 import React, { Fragment, useState } from "react";
 import { Link, Redirect } from "react-router-dom";
-import { connect } from "react-redux";
-import PropTypes from "prop-types";
+import { useSelector, useDispatch } from "react-redux";
 
 import { login } from "../actions/auth";
 
-const Login = ({ login, isAuth }) => {
+const Login = () => {
+  const isAuth = useSelector((state) => state.auth.isAuth);
+
+  const dispatch = useDispatch();
+
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -19,20 +22,18 @@ const Login = ({ login, isAuth }) => {
   const onSubmit = async (e) => {
     e.preventDefault();
     console.log(formData);
-    login(email, password);
+    dispatch(login(email, password));
   };
-
-  //Redirect if logged in
 
   if (isAuth) {
     return <Redirect to="/entries" />;
   }
 
   return (
-    <Fragment>
-      <h1>Login</h1>
-      <h4>Login to your account</h4>
+    <div className="login">
       <form className="login-form" onSubmit={(e) => onSubmit(e)}>
+        <i className="fas fa-user-circle fa-2x"></i>
+        <h4>Login to your account</h4>
         <div className="form-group">
           <input
             type="email"
@@ -55,21 +56,12 @@ const Login = ({ login, isAuth }) => {
           />
         </div>
         <input type="submit" className="login-form-submit" value="Login" />
+        <p>
+          Need an Account? <Link to="/register">Register</Link>
+        </p>
       </form>
-      <p>
-        Need an Account? <Link to="/register">Register</Link>
-      </p>
-    </Fragment>
+    </div>
   );
 };
 
-Login.propTypes = {
-  login: PropTypes.func.isRequired,
-  isAuth: PropTypes.bool,
-};
-
-const stateToProps = (state) => ({
-  isAuth: state.auth.isAuth,
-});
-
-export default connect(stateToProps, { login })(Login);
+export default Login;

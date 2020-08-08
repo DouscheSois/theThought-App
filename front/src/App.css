@@ -43,6 +43,98 @@ body {
   padding-bottom: 5rem;
 }
 
+/* LOGIN */
+.login {
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+.login p {
+  margin-top: 2rem;
+}
+
+.login h4 {
+  color: black;
+}
+
+.login i {
+  color: white;
+}
+
+.login .form-group input {
+  font-size: 1.5rem;
+  margin: 0.2rem;
+  opacity: 0.8;
+}
+
+.login-form {
+  position: relative;
+  width: 30rem;
+  background-color: #e8505b;
+  padding: 2rem;
+}
+
+.login-form input {
+  font-size: 1.5rem;
+}
+
+/* Register CSS */
+.register {
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.register p {
+  margin-top: 2rem;
+}
+
+.register h4 {
+  color: black;
+}
+
+.register i {
+  color: white;
+}
+
+.register .form-group input {
+  font-size: 1.5rem;
+  margin: 0.2rem;
+  opacity: 0.8;
+}
+
+.register-form {
+  position: relative;
+  width: 30rem;
+  background-color: #e8505b;
+  padding: 2rem;
+}
+
+.login-form input {
+  font-size: 1.5rem;
+}
+
+/* Entries CSS */
+.entries p {
+  font-size: 3rem;
+}
+
+/* Profile CSS */
+.profile {
+  padding: 5rem;
+}
+.profile h4 {
+  font-size: 3rem;
+}
+
 /* TOGGLE*/
 .dropdown-button {
   background-color: white;
@@ -69,7 +161,6 @@ body {
   right: 0;
   background-color: #f1f1f1;
   min-width: 6rem;
-  z-index: 2;
 }
 
 .navbar-link {

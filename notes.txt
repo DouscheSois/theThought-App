@@ -31,11 +31,14 @@ todo list BACKEND:
 will be used to display the author's name in a entry.)
 
 Build FRONTEND with React:
-1. Navbar |||DONE||| (can be better)
-2. Landing  |||DONE||| (can be better)
-3. Footnote |||DONE||| (can be better)
-4. Register ~~WORKING ON
-5. Login |||DONE||| (can be better)
+1. Navbar |||DONE||| (Pretty it up)
+2. Landing  |||DONE||| (Pretty it up)
+3. Footnote |||DONE||| (Pretty it up)
+4. Register |||DONE||| (Pretty it up)
+5. Login |||DONE||| (Pretty it up)
+
+the dropdown menu goes behind the login/register form when its in mobile setting
+
 
 
 

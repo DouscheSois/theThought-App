@@ -11,26 +11,26 @@ import {
 import setAuthToken from "../utilities/setAuthToken";
 
 // Load User
-export const loadUser = () => async (dispatch) => {
+export const loadUser = () => async (send) => {
   if (localStorage.token) {
     setAuthToken(localStorage.token);
   }
   try {
     const res = await axios.get("/login");
 
-    dispatch({
+    send({
       type: USER_LOADED,
       payload: res.data,
     });
   } catch (err) {
-    dispatch({
+    send({
       type: AUTH_ERROR,
     });
   }
 };
 
 //Login User
-export const login = (email, password) => async (dispatch) => {
+export const login = (email, password) => async (send) => {
   const config = {
     headers: {
       "Content-Type": "application/json",
@@ -42,26 +42,26 @@ export const login = (email, password) => async (dispatch) => {
   try {
     const res = await axios.post("/login", body, config);
 
-    dispatch({
+    send({
       type: LOGIN_SUCCESS,
       payload: res.data,
     });
 
-    dispatch(loadUser());
+    send(loadUser());
   } catch (err) {
     console.error(err.message);
     // if (errors) {
     //   errors.forEach((error) => dispatch(setAlert(error.msg, "danger")));
     // }
 
-    dispatch({
+    send({
       type: LOGIN_FAILURE,
     });
   }
 };
 
 //Register User
-export const register = ({ name, email, password }) => async (dispatch) => {
+export const register = ({ name, email, password }) => async (send) => {
   const config = {
     headers: {
       "Content-Type": "application/json",
@@ -73,24 +73,24 @@ export const register = ({ name, email, password }) => async (dispatch) => {
   try {
     const res = await axios.post("/registration", body, config);
 
-    dispatch({
+    send({
       type: REGISTER_SUCCESS,
       payload: res.data,
     });
-    dispatch(loadUser());
+    send(loadUser());
   } catch (err) {
     const errors = err.response.data.errors;
     if (errors) {
       errors.forEach((error) => console.log("Error"));
     }
 
-    dispatch({
+    send({
       type: REGISTER_FAILURE,
     });
   }
 };
 
 //Logout User
-export const logout = () => (dispatch) => {
-  dispatch({ type: LOGOUT });
+export const logout = () => (send) => {
+  send({ type: LOGOUT });
 };

@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Landing from "./components/Landing";
 import Footnote from "./components/Footnote";
 import Entries from "./components/Entries";
+import Profile from "./components/Profile";
 import Register from "./components/Register";
 import Login from "./components/Login";
 
@@ -36,6 +37,7 @@ const App = () => {
             <Route exact path="/login" component={Login} />
             <Route exact path="/register" component={Register} />
             <PrivateRoute exact path="/entries" component={Entries} />
+            <PrivateRoute exact path="/profile" component={Profile} />
           </Switch>
           <Footnote />
         </Fragment>

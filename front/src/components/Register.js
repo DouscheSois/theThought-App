@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link, Redirect } from "react-router-dom";
 
@@ -35,7 +35,7 @@ const Register = () => {
   return (
     <div className="register">
       <form className="register-form" onSubmit={(e) => onSubmit(e)}>
-        <i class="fas fa-user-plus fa-2x"></i>
+        <i className="fas fa-user-plus fa-2x"></i>
         <h4>Create an Account</h4>
         <div className="form-group">
           <input

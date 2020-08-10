@@ -37,8 +37,9 @@ Build FRONTEND with React:
 4. Register |||DONE||| (Pretty it up)
 5. Login |||DONE||| (Pretty it up)
 
-the dropdown menu goes behind the login/register form when its in mobile setting.
+The dropdown menu goes behind the login/register form when its in mobile setting.
 Keep watching the videos to progress.
+entryItem is using props, try to fix that.
 
 
 

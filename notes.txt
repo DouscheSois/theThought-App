@@ -39,7 +39,8 @@ Build FRONTEND with React:
 
 The dropdown menu goes behind the login/register form when its in mobile setting.
 Keep watching the videos to progress.
-entryItem is using props, try to fix that.
+
+figure out the comments and upvotes and why then dont appear.
 
 
 

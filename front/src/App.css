@@ -150,8 +150,60 @@ body {
 }
 
 /* Entries CSS */
-.entries p {
-  font-size: 3rem;
+.entries {
+  font-size: 1rem;
+  background-color: beige;
+  padding: 1rem;
+}
+
+.entry-item {
+  background-color: #f4f4f4;
+  border: 4px solid black;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  padding: 0;
+}
+
+.entry-item h1 {
+  background-color: #e8505b;
+  color: white;
+}
+
+.create-entry-item {
+  padding: 2rem;
+  font-weight: bolder;
+}
+
+.new-entry-form {
+  background-color: #e8505b;
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
+.new-entry-form .new-form-submit-textbox {
+  width: 80%;
+  height: 5rem;
+}
+
+.new-form-submit-button {
+  width: 10rem;
+  height: 3rem;
+  border: none;
+  background-color: black;
+  color: white;
+}
+
+.new-form-submit-button:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+.entry-text {
+  padding: 2rem;
+  background-color: white;
 }
 
 /* Profile CSS */
@@ -180,6 +232,7 @@ body {
 .dropdown-menu {
   position: relative;
   display: inline-block;
+  z-index: 1;
 }
 
 .dropdown-content {
@@ -221,11 +274,33 @@ body {
   color: white;
   background-color: black;
   padding: 1rem;
+  z-index: -1;
 }
 
 @media (max-width: 700px) {
   .landing-page {
     padding: 2rem;
+  }
+
+  .create-entry-item {
+    padding: 0.5rem;
+    margin: 1rem;
+  }
+
+  .entry-item {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .new-entry-form .new-form-submit-textbox {
+    width: 100%;
+    height: 5rem;
+  }
+
+  .new-form-submit-button {
+    width: 8rem;
+    height: 2rem;
+    margin-top: 0.5rem;
   }
 }
 

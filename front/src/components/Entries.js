@@ -1,7 +1,8 @@
-import React, { useEffect, Fragment } from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getEntries } from "../actions/entry";
 import EntryItem from "./EntryItem";
+import CreateEntryItem from "./CreateEntryItem";
 
 const Entries = () => {
   const dispatch = useDispatch();
@@ -13,14 +14,12 @@ const Entries = () => {
   const entries = useSelector((state) => state.entry.entries);
 
   return (
-    <Fragment>
-      <h4>This is the Entries Page</h4>
-      <div className="entries">
-        {entries.map((entry) => (
-          <EntryItem key={entry._id} entry={entry} />
-        ))}
-      </div>
-    </Fragment>
+    <div className="entries">
+      <CreateEntryItem />
+      {entries.map((entry) => (
+        <EntryItem key={entry._id} entry={entry} />
+      ))}
+    </div>
   );
 };
 

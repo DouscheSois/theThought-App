@@ -15,6 +15,9 @@ const Navbar = ({ auth: { isAuth, isloading }, logout }) => {
         <Link className="navbar-link" to="/entries">
           <i className="fas fa-globe fa-2x"></i> Entries
         </Link>
+        <Link className="navbar-link" to="/profiles">
+          <i className="fas fa-users fa-2x"></i> Users
+        </Link>
         <Link className="navbar-link" to="/profile">
           <i className="fas fa-user-circle fa-2x"></i> Profile
         </Link>
@@ -37,6 +40,9 @@ const Navbar = ({ auth: { isAuth, isloading }, logout }) => {
         </Link>
         <Link className="navbar-link" to="/login">
           <i className="fas fa-sign-in-alt fa-2x"></i> Login
+        </Link>
+        <Link className="navbar-link" to="/profiles">
+          <i className="fas fa-users fa-2x"></i> Users
         </Link>
       </div>
     </div>

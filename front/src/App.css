@@ -243,6 +243,44 @@ body {
   font-size: 3rem;
 }
 
+.all-profiles-heading {
+  padding: 1rem;
+  background-color: #e8505b;
+}
+
+.all-profiles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.profile-item {
+  margin: 0.5rem;
+  padding: 2rem;
+  width: 25rem;
+  height: 25rem;
+  background-color: lightblue;
+}
+
+.profile-item i {
+  font-size: 7rem;
+}
+
+.profile-item h2 {
+  font-size: 1.5rem;
+}
+
+.profile-item button {
+  padding: 1.5rem;
+  border: none;
+  background-color: #1b6ca8;
+  color: white;
+}
+
+.profile-item button:hover {
+  background-color: #e8505b;
+}
+
 /* TOGGLE*/
 .dropdown-button {
   background-color: white;

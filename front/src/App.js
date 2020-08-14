@@ -6,6 +6,7 @@ import Landing from "./components/Landing";
 import Footnote from "./components/Footnote";
 import Entries from "./components/Entries";
 import Profile from "./components/Profile";
+import AllProfiles from "./components/AllProfiles";
 import Register from "./components/Register";
 import Login from "./components/Login";
 
@@ -36,6 +37,7 @@ const App = () => {
             <Route exact path="/" component={Landing} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/register" component={Register} />
+            <Route exact path="/profiles" component={AllProfiles} />
             <PrivateRoute exact path="/profile" component={Profile} />
             <PrivateRoute exact path="/entries" component={Entries} />
           </Switch>

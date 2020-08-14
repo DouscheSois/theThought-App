@@ -25,7 +25,7 @@ export const getCurrentUserProfile = () => async (send) => {
 
 export const getProfileById = (userId) => async (send) => {
   try {
-    const res = await axios.get(`/profile/user/${userId}`);
+    await axios.get(`/profile/user/${userId}`);
 
     send({
       type: GET_PROFILE,
@@ -39,7 +39,9 @@ export const getProfileById = (userId) => async (send) => {
 };
 
 export const getAllProfiles = () => async (send) => {
-  send({ type: CLEAR_PROFILE });
+  send({
+    type: UPDATE_PROFILE,
+  });
   try {
     const res = await axios.get("/profile");
     send({
@@ -91,7 +93,7 @@ export const createProfile = (formData, history, edit = false) => async (
 export const deleteAccount = () => async (send) => {
   if (window.confirm("Are you sure? This cannot be undone.")) {
     try {
-      const res = await axios.delete(`/profile`);
+      await axios.delete(`/profile`);
 
       send({ type: CLEAR_PROFILE });
       send({ type: ACCOUNT_DELETED });

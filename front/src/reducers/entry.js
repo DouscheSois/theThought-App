@@ -1,4 +1,10 @@
-import { GET_ENTRIES, ENTRIES_ERROR } from "../actions/types";
+import {
+  GET_ENTRIES,
+  ENTRIES_ERROR,
+  UPDATE_LIKES,
+  DELETE_ENTRY,
+  ADD_ENTRY,
+} from "../actions/types";
 
 const initialState = {
   entries: [],
@@ -17,10 +23,32 @@ export default function (state = initialState, action) {
         entries: payload,
         isloading: false,
       };
+    case ADD_ENTRY:
+      return {
+        ...state,
+        entries: [payload, ...state.entries],
+        isloading: false,
+      };
+    case DELETE_ENTRY:
+      return {
+        ...state,
+        entries: state.entries.filter((entry) => entry._id !== payload),
+        loading: false,
+      };
     case ENTRIES_ERROR:
       return {
         ...state,
         error: payload,
+        isloading: false,
+      };
+    case UPDATE_LIKES:
+      return {
+        ...state,
+        entries: state.entries.map((entry) =>
+          entry._id === payload.id
+            ? { ...entry, upvotes: payload.upvotes }
+            : entry
+        ),
         isloading: false,
       };
     default:

@@ -21,8 +21,6 @@ by adding { extended: false } to the index.js app.use(express.json()). The middl
 for the req.body.
 
 
-1. Try downvoting an entry.
-
 todo list BACKEND:
 1. upvotes and downvotes for the comments in an entry. (FEATURE_OFF)
 2. comments for the comments in entry. (FEATURE_OFF)
@@ -37,12 +35,16 @@ Build FRONTEND with React:
 4. Register |||DONE||| (Pretty it up)
 5. Login |||DONE||| (Pretty it up)
 
-The dropdown menu goes behind the login/register form when its in mobile setting.
-Keep watching the videos to progress.
+The upvote won't return new value when clicked, I have to refresh the
+route to update - |||Fixed||| it by changing entryId to simply id in
+the actions folder entry.js
 
-figure out the comments and upvotes and why then dont appear.
+When I refresh the locahost:3000/entries the entries dissappear.
 
+Link in comments wont appear
+fix privateroute. useSelector()
 
+Profile.js component start 
 
 
 
@@ -52,4 +54,5 @@ figure out the comments and upvotes and why then dont appear.
 --------------------------------------------------------------------------------
 Notes in General:
 
-Build Personal site with React, Node, Express, and Mongo.
+.Build Personal site with React, Node, Express, and Mongo.
+.Build App that collects information. Want to win $500 in cash, fill out this form and send it to enter

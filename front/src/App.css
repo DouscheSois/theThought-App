@@ -151,19 +151,20 @@ body {
 
 /* Entries CSS */
 .entries {
+  margin-top: 2rem;
   font-size: 1rem;
-  background-color: beige;
-  padding: 1rem;
+  background-color: #fff;
+  padding: 2rem;
 }
 
 .entry-item {
   background-color: #f4f4f4;
-  border: 4px solid black;
+  border: 1px solid black;
   margin-top: 1rem;
   margin-bottom: 1rem;
   margin-left: 5rem;
   margin-right: 5rem;
-  padding: 0;
+  padding: 1rem;
 }
 
 .entry-item h1 {
@@ -179,12 +180,13 @@ body {
 .new-entry-form {
   background-color: #e8505b;
   padding: 1rem;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 .new-entry-form .new-form-submit-textbox {
   width: 80%;
   height: 5rem;
+  font-size: 1.3rem;
 }
 
 .new-form-submit-button {
@@ -204,6 +206,33 @@ body {
 .entry-text {
   padding: 2rem;
   background-color: white;
+}
+
+.inter-icons {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.entry-item ul {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.entry-item ul li {
+  list-style: none;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.entry-item .inter-icons {
+  font-size: 1.7rem;
+}
+
+.entry-item .inter-icons i:hover {
+  cursor: pointer;
+  color: blue;
 }
 
 /* Profile CSS */
@@ -274,12 +303,16 @@ body {
   color: white;
   background-color: black;
   padding: 1rem;
-  z-index: -1;
+  margin-top: 8rem;
 }
 
 @media (max-width: 700px) {
   .landing-page {
     padding: 2rem;
+  }
+
+  .entries {
+    padding: 0.2rem;
   }
 
   .create-entry-item {
@@ -302,7 +335,4 @@ body {
     height: 2rem;
     margin-top: 0.5rem;
   }
-}
-
-@media (max-width: 480px) {
 }

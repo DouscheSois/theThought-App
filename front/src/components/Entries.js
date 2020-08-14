@@ -10,7 +10,6 @@ const Entries = () => {
   useEffect(() => {
     dispatch(getEntries());
   }, [dispatch]);
-
   const entries = useSelector((state) => state.entry.entries);
 
   return (

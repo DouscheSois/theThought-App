@@ -1,6 +1,6 @@
 import React, { useEffect, Fragment } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { getAllProfiles } from "../actions/profile";
+import { getAllProfiles } from "../../actions/profile";
 import ProfileItem from "./ProfileItem";
 import AllProfilesHeading from "./AllProfilesHeading";
 

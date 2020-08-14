@@ -4,9 +4,9 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Landing from "./components/Landing";
 import Footnote from "./components/Footnote";
-import Entries from "./components/Entries";
-import Profile from "./components/Profile";
-import AllProfiles from "./components/AllProfiles";
+import Entries from "./components/entries/Entries";
+import Profile from "./components/profile/Profile";
+import AllProfiles from "./components/profile/AllProfiles";
 import Register from "./components/Register";
 import Login from "./components/Login";
 

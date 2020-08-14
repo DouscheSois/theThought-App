@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { getEntries } from "../actions/entry";
+import { getEntries } from "../../actions/entry";
 import EntryItem from "./EntryItem";
 import CreateEntryItem from "./CreateEntryItem";
 

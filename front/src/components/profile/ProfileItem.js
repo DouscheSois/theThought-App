@@ -4,8 +4,6 @@ const ProfileItem = ({
   profile: {
     user: { name, _id },
     location,
-    bio,
-    social,
   },
 }) => {
   return (

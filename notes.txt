@@ -44,7 +44,7 @@ When I refresh the locahost:3000/entries the entries dissappear.
 Link in comments wont appear
 fix privateroute. useSelector()
 
-Profile.js component start 
+Start by fixing the profile/me route. THe users profile
 
 
 

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 
-import { addEntry } from "../actions/entry";
+import { addEntry } from "../../actions/entry";
 
 const CreateEntryItem = () => {
   const [text, setText] = useState("");

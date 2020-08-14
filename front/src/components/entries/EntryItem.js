@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import Moment from "react-moment";
 
-import { addUpvote, removeUpvote, deleteEntry } from "../actions/entry";
+import { addUpvote, removeUpvote, deleteEntry } from "../../actions/entry";
 
 const EntryItem = ({
   entry: { _id, name, user, text, date, upvotes, comments },

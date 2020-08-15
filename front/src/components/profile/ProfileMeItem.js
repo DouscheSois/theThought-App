@@ -1,14 +1,15 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
-const ProfileMeItem = ({ profile: { name, location, bio, social } }) => {
+const ProfileMeItem = ({ bio, location }) => {
+  const profile = useSelector((state) => state.profile);
   return (
     <div className="profile-item">
       <i className="fas fa-portrait fa-2x"></i>
-      <h2>
-        "{name}" is now <span className="user-online">Online</span>
-      </h2>
-      <h2>{location}</h2>
-      <h2>{bio}</h2>
+      <div>
+        <h2>{bio}</h2>
+        <h2>{location}</h2>
+      </div>
       <button>Edit Profile</button>
     </div>
   );

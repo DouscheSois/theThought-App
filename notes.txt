@@ -39,12 +39,15 @@ The upvote won't return new value when clicked, I have to refresh the
 route to update - |||Fixed||| it by changing entryId to simply id in
 the actions folder entry.js
 
+--------------------------------- Daily Tasks
 When I refresh the locahost:3000/entries the entries dissappear.
 
 Link in comments wont appear
+
 fix privateroute. useSelector()
 
 Start by fixing the profile/me route. The users profile
+log in with a user that doestn have a profile, it wont say you dont have a profile
 
 
 

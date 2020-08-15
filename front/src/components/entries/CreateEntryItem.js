@@ -9,6 +9,7 @@ const CreateEntryItem = () => {
 
   return (
     <div className="create-entry-item">
+      <h3>Post Something Below</h3>
       <form
         className="new-entry-form"
         onSubmit={(e) => {

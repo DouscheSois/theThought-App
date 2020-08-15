@@ -1,13 +1,6 @@
 import React from "react";
 
-const ProfileMeItem = ({
-  profile: {
-    user: { name, _id },
-    location,
-    bio,
-    social,
-  },
-}) => {
+const ProfileMeItem = ({ profile: { name, location, bio, social } }) => {
   return (
     <div className="profile-item">
       <i className="fas fa-portrait fa-2x"></i>

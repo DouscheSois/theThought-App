@@ -1,41 +1,34 @@
-import React, { useEffect, Link, Fragment } from "react";
-import { useSelector, useDispatch, connect } from "react-redux";
-import PropTypes from "prop-types";
+import React, { useEffect, Fragment } from "react";
+import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
 import { getCurrentUserProfile } from "../../actions/profile";
 import ProfileMeItem from "./ProfileMeItem";
 
-const Profile = ({ isloading, profile }) => {
+const Profile = () => {
+  useSelector((state) => state.auth);
+  const profile = useSelector((state) => state.profile);
+  const auth = useSelector((state) => state.auth);
+
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(getCurrentUserProfile());
   }, [dispatch]);
 
-  useSelector((state) => state.auth);
-  useSelector((state) => state.profile);
-
-  return isloading && profile === null ? (
-    <h4>loading</h4>
+  return profile.isloading && profile.profile === null ? (
+    <h3>loading</h3>
   ) : (
-    <Fragment>
-      <p>
-        <i className="fas fa-user"></i> Welcome
-      </p>
-      {profile !== null ? (
-        <Fragment>
-          <h1>This is your profile page</h1>
-          <button className="btn btn-danger">
-            <i className="fas fa-user-minus"></i> Delete My Account
-          </button>
-        </Fragment>
+    <div className="profile-page">
+      <h2>Welcome to your profile, {auth.user && auth.user.name}</h2>
+      {profile.profile === null ? (
+        <div className="profile-page-body">
+          <p>Create Profile Now</p>
+          <Link to="/create-profile">Create Profile</Link>
+        </div>
       ) : (
-        <Fragment>
-          <p>You have not yet setup a profile, please add some info.</p>
-          <Link to="/create-profile" className="btn btn-primary my-1">
-            Create Profile
-          </Link>
-        </Fragment>
+        <Fragment>has</Fragment>
       )}
-    </Fragment>
+    </div>
   );
 };
 

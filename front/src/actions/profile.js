@@ -9,6 +9,7 @@ import {
 } from "./types";
 
 export const getCurrentUserProfile = () => async (send) => {
+  send({ type: CLEAR_PROFILE });
   try {
     const res = await axios.get("/profile/me");
     send({

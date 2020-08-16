@@ -7,6 +7,7 @@ import {
   USER_LOADED,
   AUTH_ERROR,
   LOGOUT,
+  CLEAR_PROFILE,
 } from "./types";
 import setAuthToken from "../utilities/setAuthToken";
 
@@ -92,5 +93,6 @@ export const register = ({ name, email, password }) => async (send) => {
 
 //Logout User
 export const logout = () => (send) => {
+  send({ type: CLEAR_PROFILE });
   send({ type: LOGOUT });
 };

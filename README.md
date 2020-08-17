@@ -43,15 +43,25 @@ List of Tech: HTML, CSS, JS, REACT, REDUX, NODE, EXPRESS, MONGODB
 
 
     "axios": "^0.19.2",
+    
     "moment": "^2.27.0",
+    
     "react": "^16.13.1",
+    
     "react-dom": "^16.13.1",
+    
     "react-moment": "^0.9.7",
+    
     "react-redux": "^7.2.1",
+    
     "react-router-dom": "^5.2.0",
+    
     "react-scripts": "3.4.1",
+    
     "redux": "^4.0.5",
+    
     "redux-devtools-extension": "^2.13.8",
+    
     "redux-thunk": "^2.3.0"
 
 

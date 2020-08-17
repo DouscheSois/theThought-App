@@ -5,6 +5,7 @@
 This App was built using MERN Stack tech.
 
 -React Hooks (useEffect, useState)
+
 -Redux Hooks (useSelector, useDispatch)
 
 <small>Live Link: {}</small>
@@ -23,12 +24,19 @@ List of Tech: HTML, CSS, JS, REACT, REDUX, NODE, EXPRESS, MONGODB
 
 "dependencies": {
     "bcrypt": "^5.0.0",
+    
     "config": "^3.3.1",
+    
     "express": "^4.17.1",
+    
     "express-validator": "^6.6.0",
+    
     "jsonwebtoken": "^8.5.1",
+    
     "mongoose": "^5.9.26",
+    
     "request": "^2.88.2"
+    
   },
 
 <h2>Frontend: Dependencies</h2>

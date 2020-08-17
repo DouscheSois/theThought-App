@@ -20,6 +20,7 @@ List of Tech:
 
 HTML, CSS, JS, REACT, REDUX, NODE, EXPRESS, MONGODB
 
+<hr />
 <h2>Go to thethought directory and do 'npm run dev' to start the app </h2>
 
 <h2>Backend: Dependencies</h2>

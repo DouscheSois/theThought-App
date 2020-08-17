@@ -68,10 +68,12 @@ List of Tech: HTML, CSS, JS, REACT, REDUX, NODE, EXPRESS, MONGODB
 
 <h2>Development Dependencies</h2>
 
-"devDependencies": {
+
+
     "concurrently": "^5.2.0",
+    
     "nodemon": "^2.0.4"
-  },
+
 
 <h2>Author</h2>
 

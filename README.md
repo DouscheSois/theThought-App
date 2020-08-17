@@ -1,6 +1,6 @@
 # theThought-App
 
-<h3>theThought is a WebApp thats lets users share a thought to the world. You can create an account, post new shares, comment and like them, and even have a basic profile where you can share basic information like name, bio, and location. There's also the opportunity to share social media links with others. We also have the option for users to easily delete their account and all their information with it too.</h3>
+<h4>theThought is a WebApp that lets users share a thought to the world. You can create an account, post new shares, comment and like them, and even have a basic profile where you can share basic information like name, bio, and location. There's also the opportunity to share social media links with others. We also have the option for users to easily delete their account and all their information with it too.</h4>
 
 This App was built using MERN Stack tech.
 
@@ -16,7 +16,9 @@ This App was built using MERN Stack tech.
 
 I wanted to build a semi-large app because I wanted to challenge myself. I want to grow my skills as a developer and this App has helped me tremendeously. I've learned many new things like how to use react hooks, the new redux hooks, how to create a store & reducer & action, and how to work with other dependencies to really make your application pop.
 
-List of Tech: HTML, CSS, JS, REACT, REDUX, NODE, EXPRESS, MONGODB
+List of Tech: 
+
+HTML, CSS, JS, REACT, REDUX, NODE, EXPRESS, MONGODB
 
 <h2>npm run dev</h2>
 

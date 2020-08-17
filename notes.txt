@@ -46,9 +46,9 @@ Link in comments wont appear
 
 fix privateroute. useSelector()
 
-Start by fixing the profile/me route. The users profile
-
-log in with a user that doestn have a profile, it wont say you dont have a profile
+It created a new profile but it doesnt redirect correctly. When I go to create
+a profile for a user with or without a profile the alert will only say profile created.
+withrouter might not be working
 
 
 

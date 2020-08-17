@@ -73,15 +73,15 @@ export const createProfile = (formData, history, edit = false) => async (
       payload: res.data,
     });
 
-    send(alert(edit ? "Profile Updated" : "Profile Created", "success"));
+    send(alert(edit ? "Profile Updated" : "Profile Created"));
 
     if (!edit) {
-      history.push("/entries");
+      history.push("/profile");
     }
   } catch (err) {
     const errors = err.response.data.errors;
     if (errors) {
-      errors.forEach((error) => send(alert(error.msg, "danger")));
+      errors.forEach((error) => console.log("Error"));
     }
 
     send({

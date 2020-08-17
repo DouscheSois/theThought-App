@@ -1,8 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 
-const ProfileMeItem = ({ bio, location }) => {
-  const profile = useSelector((state) => state.profile.profile);
+const ProfileMeItem = ({ profile: { _id, bio, location } }) => {
   return (
     <div className="profile-item">
       <i className="fas fa-portrait fa-2x"></i>

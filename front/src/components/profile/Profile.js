@@ -26,7 +26,9 @@ const Profile = () => {
           <Link to="/create-profile">Create Profile</Link>
         </div>
       ) : (
-        <Fragment>has</Fragment>
+        <Fragment>
+          <ProfileMeItem key={profile._id} profile={profile} />
+        </Fragment>
       )}
     </div>
   );

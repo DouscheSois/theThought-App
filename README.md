@@ -22,7 +22,8 @@ List of Tech: HTML, CSS, JS, REACT, REDUX, NODE, EXPRESS, MONGODB
 
 <h2>Backend: Dependencies</h2>
 
-"dependencies": {
+
+
     "bcrypt": "^5.0.0",
     
     "config": "^3.3.1",
@@ -37,11 +38,10 @@ List of Tech: HTML, CSS, JS, REACT, REDUX, NODE, EXPRESS, MONGODB
     
     "request": "^2.88.2"
     
-  },
 
 <h2>Frontend: Dependencies</h2>
 
-"dependencies": {
+
     "axios": "^0.19.2",
     "moment": "^2.27.0",
     "react": "^16.13.1",
@@ -53,7 +53,7 @@ List of Tech: HTML, CSS, JS, REACT, REDUX, NODE, EXPRESS, MONGODB
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0"
-  },
+
 
 
 <h2>Development Dependencies</h2>

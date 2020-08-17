@@ -1,8 +1,8 @@
 # theThought-App
 
-This App was built using MERN Stack tech.
+HTML, CSS, JS, REACT, REDUX, NODE, EXPRESS, MONGODB
 
-<strong>App is still in production! Approx. 80% finished</strong>
+<strong>App is still in production!</strong>
 
 <strong>Approx. 80% finished</strong>
 
@@ -19,10 +19,6 @@ I wanted to build a semi-large app because I wanted to challenge myself. I want 
 -React Hooks (useEffect, useState)
 
 -Redux Hooks (useSelector, useDispatch)
-
-List of Tech: 
-
-HTML, CSS, JS, REACT, REDUX, NODE, EXPRESS, MONGODB
 
 <hr />
 <h2>Go to thethought directory and do 'npm run dev' to start the app </h2>

@@ -2,7 +2,9 @@
 
 This App was built using MERN Stack tech.
 
-<strong style='alingText:center;'>App is still in production! Approx. 80% finished</strong>
+<strong>App is still in production! Approx. 80% finished</strong>
+
+<strong>Approx. 80% finished</strong>
 
 <h4>theThought is a web App that lets users share a thought to the world. You can create an account, post new shares, comment and like them, and even have a basic profile where you can share basic information like name, bio, and location. There's also the opportunity to share social media links with others. We also have the option for users to easily delete their account and all their information with it too.</h4>
 

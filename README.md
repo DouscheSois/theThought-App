@@ -2,11 +2,7 @@
 
 This App was built using MERN Stack tech.
 
-<h4>theThought is a WebApp that lets users share a thought to the world. You can create an account, post new shares, comment and like them, and even have a basic profile where you can share basic information like name, bio, and location. There's also the opportunity to share social media links with others. We also have the option for users to easily delete their account and all their information with it too.</h4>
-
--React Hooks (useEffect, useState)
-
--Redux Hooks (useSelector, useDispatch)
+<h4>theThought is a web App that lets users share a thought to the world. You can create an account, post new shares, comment and like them, and even have a basic profile where you can share basic information like name, bio, and location. There's also the opportunity to share social media links with others. We also have the option for users to easily delete their account and all their information with it too.</h4>
 
 <small>Live Link: {}</small>
 
@@ -15,6 +11,10 @@ This App was built using MERN Stack tech.
 <h2>Summary</h2>
 
 I wanted to build a semi-large app because I wanted to challenge myself. I want to grow my skills as a developer and this App has helped me tremendeously. I've learned many new things like how to use react hooks, the new redux hooks, how to create a store & reducer & action, and how to work with other dependencies to really make your application pop.
+
+-React Hooks (useEffect, useState)
+
+-Redux Hooks (useSelector, useDispatch)
 
 List of Tech: 
 

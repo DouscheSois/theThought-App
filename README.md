@@ -15,6 +15,8 @@ This App was built using MERN Stack tech.
 
 I wanted to build a semi-large app because I wanted to challenge myself. I want to grow my skills as a developer and this App has helped me tremendeously. I've learned many new things like how to use react hooks, the new redux hooks, how to create a store & reducer & action, and how to work with other dependencies to really make your application pop.
 
+<h2>npm run dev</h2>
+
 <h2>Backend: Dependencies</h2>
 
 "dependencies": {

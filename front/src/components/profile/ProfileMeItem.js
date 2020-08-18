@@ -9,7 +9,6 @@ const ProfileMeItem = ({ profile: { _id, bio, location } }) => {
         <h2>{bio}</h2>
         <h2>{location}</h2>
       </div>
-      <button>Edit Profile</button>
     </div>
   );
 };

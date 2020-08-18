@@ -37,7 +37,7 @@ const CreateProfile = ({ history }) => {
   return (
     <div className="create-profile-form">
       <h1>Create/Edit your profile</h1>
-      <form className="form-group" onSubmit={(e) => onSubmit(e)}>
+      <form className="form" onSubmit={(e) => onSubmit(e)}>
         <input
           className="form-group"
           type="text"

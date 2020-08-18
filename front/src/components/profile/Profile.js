@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { getCurrentUserProfile } from "../../actions/profile";
 import ProfileMeItem from "./ProfileMeItem";
+import EditProfile from "./EditProfile";
 
 const Profile = () => {
   useSelector((state) => state.auth);
@@ -27,6 +28,7 @@ const Profile = () => {
         </div>
       ) : (
         <Fragment>
+          <EditProfile />
           <ProfileMeItem key={profile._id} profile={profile} />
         </Fragment>
       )}

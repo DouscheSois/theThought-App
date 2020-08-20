@@ -8,7 +8,7 @@ const Profile = require("../models/Profile");
 const User = require("../models/User");
 
 // @Route GET /profile
-// Public (Does not need auth middleware)
+// Public (Doesot need auth middleware)
 // Gets all profiles
 router.get("/", async (req, res) => {
   try {
@@ -113,9 +113,9 @@ router.post(
     if (location) profileField.location = location;
 
     profileField.social = {};
-    if (twitter) profileFields.social.youtube = youtube;
-    if (linkedin) profileFields.social.youtube = youtube;
-    if (instagram) profileFields.social.youtube = youtube;
+    if (twitter) profileFields.social.twitter = twitter;
+    if (linkedin) profileFields.social.linkedin = linkedin;
+    if (instagram) profileFields.social.instagram = instagram;
 
     try {
       let profile = await Profile.findOne({ user: req.user.id });

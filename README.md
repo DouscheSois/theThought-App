@@ -80,5 +80,5 @@ I wanted to build a semi-large app because I wanted to challenge myself. I want 
 
 <h2>Author</h2>
 
-Roger Alexander - Full Stack Developer
+Roger Alexander - Full Stack Developer <a href="http://www.douschesois.com">Portfolio Website</a>
 
